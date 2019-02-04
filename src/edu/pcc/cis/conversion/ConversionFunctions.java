@@ -3,9 +3,15 @@ package edu.pcc.cis.conversion;
 /**
  * A library of conversion functions
  *
- * @author Cara Tang
- * @version 2018.04.14
+ * @author Cara Tang and Nicholas Goff
+ * @version 2019.02.19
+ *
+ * Lab 4 Mod
+ * fixed the cupToTableSpoons converti
+ * fixed the monthNumToMonthName
+ * -
  */
+
 public class ConversionFunctions {
     private static final String[] MONTH_NAMES = { "", "January", "February", "March", "April",
             "May", "June", "July", "August", "September", "October", "November", "December" };
@@ -25,9 +31,7 @@ public class ConversionFunctions {
      * @return the number of tablespoons in the given number of cups
      */
     public static int cupsToTablespoons(int cups) {
-        // This method does not work correctly. You will fix it as you work through the tests.
-        // Remove these comments once it is implemented correctly.
-        return 0;
+        return (cups*16);
     }
 
     /**
@@ -36,8 +40,9 @@ public class ConversionFunctions {
      * @return the name of the given month, or empty string if the month number is invalid
      */
     public static String monthNumToMonthName(int monthNum) {
-        // This method does not work correctly. You will fix it as you work through the tests.
-        // Remove these comments once it is implemented correctly.
-        return MONTH_NAMES[monthNum];
+        if (monthNum > 0 && monthNum < 13) {
+            return MONTH_NAMES[monthNum];
+        } else {
+          return ("");}
     }
 }
